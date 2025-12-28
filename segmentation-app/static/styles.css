@@ -1,0 +1,36 @@
+/* static/styles.css */
+.row-spacing { margin-bottom: 0.25rem; }   /* more breathing room between rows */
+.col-spacing { padding: 1rem; }             /* balanced padding inside columns */
+.gr-button { margin-top: 0.75rem; }         /* extra vertical spacing for buttons */
+
+.gr-image, .gr-video {
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.gr-textbox, .gr-dropdown, .gr-slider {
+  margin-bottom: 0.25rem;
+}
+
+.login-card, .app-card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  background-color: #fff;
+}
+
+.button-row .equal-btn {
+  flex: 1 !important;
+  min-width: 0;
+  text-align: center;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+  padding: 0.6rem 1rem;
+}
+
+/* hover effect */
+.button-row .equal-btn:hover {
+  border-color: #ddd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
