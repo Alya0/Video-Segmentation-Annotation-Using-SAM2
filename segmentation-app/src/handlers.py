@@ -288,7 +288,7 @@ def do_login(username, password):
         if verify_user(username, password):
             user_idx = get_user(username)
             st=app_state.annotator_states[user_idx]
-            number_of_vids_done = app_state.VIDEOS_DF[app_state.VIDEOS_DF["annotator"] == user_idx & app_state.VIDEOS_DF["annotated"]].shape[0]
+            number_of_vids_done = app_state.VIDEOS_DF[(app_state.VIDEOS_DF["annotator"] == user_idx) & (app_state.VIDEOS_DF["annotated"])].shape[0]
             return (
                 username,                         
                 gr.update(visible=False),         
