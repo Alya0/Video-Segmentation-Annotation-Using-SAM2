@@ -1,22 +1,21 @@
+root_dir: /home/ # change to the root directory of the repoß
 sam2_model_path:
   # Change this if the checkpoint is stored elsewhere on your machine
-  checkpoint: sam2/checkpoints/sam2.1_hiera_large.pt
+  checkpoint: ${root_dir}/sam2/checkpoints/sam2.1_hiera_large.pt
   # Keep as it is
   config: configs/sam2.1/sam2.1_hiera_l.yaml
 
 data:
-  root_dir: /home/alya.almsouti/Desktop/Segmentation_app/dummy_data
-
   # input dirs (only this needs to contain the videos)
-  videos_dir: ${data.root_dir}/videos
+  videos_dir: ${root_dir}/dummy_data/videos
 
   # output dirs (created and filled when executing the code)
-  frames_dir: ${data.root_dir}/frames                     # frames extracted from videos
-  inference_states_dir: ${data.root_dir}/inference_states # SAM inference states per video
-  masks_by_annotators_dir: ${data.root_dir}/masks_by_annotators # masks shown to annotators
-  masks_dir: ${data.root_dir}/masks                       # masks after generate_masks.py
-  annotations_dir: ${data.root_dir}/annotations           # annotator click points
-  videos_df_path: ${data.root_dir}/video_paths.csv        # video names and paths
+  frames_dir: ${root_dir}/dummy_data/frames                     # frames extracted from videos
+  inference_states_dir: ${root_dir}/dummy_data/inference_states # SAM inference states per video
+  masks_by_annotators_dir: ${root_dir}/dummy_data/masks_by_annotators # masks shown to annotators
+  masks_dir: ${root_dir}/dummy_data/masks                       # masks after generate_masks.py
+  annotations_dir: ${root_dir}/dummy_data/annotations           # annotator click points
+  videos_df_path: ${root_dir}/dummy_data/video_paths.csv        # video names and paths
 
 app:
   primary_color: '#90B88E'
