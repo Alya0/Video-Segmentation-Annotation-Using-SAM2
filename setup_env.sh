@@ -36,9 +36,9 @@ fi
 echo "🔧 Installing SAM2 (editable mode)"
 cd sam2
 pip install -e .
-cd ..
 
-echo "📁 Moving into segmentation-app directory"
-cd segmentation-app
+echo "⬇️ Downloading checkpoints"
+cd checkpoints
+bash download_ckpts.sh
 
 echo "✅ Environment setup complete!"
