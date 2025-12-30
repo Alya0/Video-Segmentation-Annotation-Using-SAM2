@@ -1,5 +1,8 @@
 # Video-Segmentation-Annotation-Using-SAM2
 
+## Proejct Overview
+This project enables video annotation for segmentation using SAM2 in a simplified workflow, where annotators only need to annotate a single frame of each video using point prompts.
+
 ## Installation
 Make sure you have **Python installed** (recommended: Python 3.8+).  
 A **CUDA-enabled GPU** with CUDA properly installed is also required, as the SAM2 model relies on GPU support.
