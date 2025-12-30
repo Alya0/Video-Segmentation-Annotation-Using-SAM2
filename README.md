@@ -19,23 +19,22 @@ cd segmentation-app
    You can also customize the UI primary and secondary colors.
 
 2. **(Optional) Enable user authentication.**  
-   To enable multiple users with passwords:
+   To enable multiple users to do annotations, with different videos assigned to each user, follow these steps:
    - Rename `.env.example` to `.env`
-   - Uncomment and update the usernames and passwords  
-   You may add as many users as needed.
+   - Uncomment and update the usernames and passwords, you may add as many users as needed.
 
 
-3. **Save inference states.** Run the following script to generate and save inference states:
+3. **Save inference states.** Run the following script to generate and save inference states from SAM2:
    ```bash
    python save_inference_states.py
    ```
-   If your dataset structure differs (e.g., videos are not all in a single folder), modify the logic in get_videos_path_csv() (line 44) so that the resulting CSV contains the full paths to all videos.
+   If your dataset structure differs (e.g., videos are not all in a single folder), modify the logic in `get_videos_path_csv()` (line 44) so that the resulting CSV contains the full paths to all videos.
 
 4. **Launch the annotation application.** Start the Gradio-based annotation interface:
     ```bash
     python segmentation_app.py
     ```
-   This will generate a shareable link (valid for one week). It is recommended to run this inside a tmux session.
+   This will give you a shareable link, or you can use the local server running on port 8080.. It is recommended to run this inside a tmux session.
 
 5. **Generate segmentation masks.** After completing all annotations, generate the final masks by running:
     ```bash
