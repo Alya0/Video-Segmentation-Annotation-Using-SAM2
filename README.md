@@ -13,13 +13,12 @@ cd segmentation-app
 ```
 ## Running the annotation
 
-1. **Configure `config.yaml.**  
+1. **Configure `config.yaml`.**  
    Set the dataset video root path (i.e., the folder containing your videos), following the dummy data example.  
    Adjust output paths as needed for storing masks.  
    You can also customize the UI primary and secondary colors.
 
 2. **(Optional) Enable user authentication.**  
-   A `.env.example` file is provided.  
    To enable multiple users with passwords:
    - Rename `.env.example` to `.env`
    - Uncomment and update the usernames and passwords  
