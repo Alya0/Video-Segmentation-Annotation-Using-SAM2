@@ -1,4 +1,4 @@
-root_dir: /home/alyaalmsouti/Video-Segmentation-Annotation-Using-SAM2 # change to the root directory of the repo
+root_dir: /home/Video-Segmentation-Annotation-Using-SAM2 # change to the root directory of the repo
 sam2_model_path:
   # Change this if the checkpoint is stored elsewhere on your machine
   checkpoint: ${root_dir}/sam2/checkpoints/sam2.1_hiera_large.pt
