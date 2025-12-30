@@ -17,11 +17,12 @@ app_state.VIDEOS_DF.to_csv(app_state.VIDEOS_DF_PATH, index=False)
 app_state.annotator_states = make_annotator_states(list(app_state.USER_TO_IDX.keys()), app_state.VIDEOS_DF, video_col='video_path')
 
 if __name__ == "__main__":
-    demo = init_gradio_app(app_state.USE_CREDENTIALS)
+    demo, launch_kwargs = init_gradio_app(app_state.USE_CREDENTIALS)
     demo.launch(
+        **launch_kwargs,
         server_name="0.0.0.0",
         server_port=8080,
-        allowed_paths=[app_state.FRAMES_DIR,app_state.VIDEOS_DIR, app_state.MASKS_BY_ANOT_DIR],
-        share=True
+        allowed_paths=[app_state.FRAMES_DIR, app_state.VIDEOS_DIR, app_state.MASKS_BY_ANOT_DIR],
+        share=True,
     )
 

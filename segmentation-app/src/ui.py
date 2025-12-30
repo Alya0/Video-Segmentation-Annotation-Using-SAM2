@@ -31,10 +31,7 @@ def load_css_text(path: Path) -> str:
     return path.read_text() if path.exists() else ""
 
 def init_gradio_app(use_credentials: bool = True):  
-    with gr.Blocks(
-        theme=white_theme,
-        css=load_css_text(CSS_PATH)
-    ) as demo:
+    with gr.Blocks() as demo:
         current_user = gr.State("")         # per-session user holder
         with gr.Row(elem_classes="row-spacing"):
             with gr.Column(scale=3):
@@ -118,4 +115,4 @@ def init_gradio_app(use_credentials: bool = True):
                 outputs=[frame_slider, img_comp, status, pos_btn, neg_btn, video_comp, invalid_tick]
             ) 
 
-    return demo
+    return demo, {"theme": white_theme, "css": load_css_text(CSS_PATH)}

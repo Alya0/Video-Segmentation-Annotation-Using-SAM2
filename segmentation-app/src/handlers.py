@@ -2,6 +2,9 @@ import json
 import os
 from pathlib import Path
 
+os.environ["GRADIO_TEMP_DIR"] = str(
+    Path.home() / ".gradio_tmp"
+)
 import gradio as gr
 import numpy as np
 import torch
