@@ -61,11 +61,26 @@ cd segmentation-app
 Masks will be saved to the directory specified in ```config.yaml```, along with an ```overlay.mp4``` file.
 
 
-## Using the Annotation Interface
+## Segmentation Annotation Interface – Use Cases:
 
-A short demo video or GIF illustrating the annotation workflow will be added here.
+1- Watch Video: Play the video to identify objects of interest.
 
-The interface allows users to add positive and negative point prompts on a selected frame, refine the segmentation mask interactively, and proceed to the next video once a satisfactory result is obtained.
+2- Navigate Frames: Use the slider to find frames where the target object appears for segmentation.
+
+3- Add Points for Segmentation: Click positive points on objects to generate segmentation masks. Use negative points to remove unwanted areas. (One frame only)
+
+4- Undo Last Point: Remove the most recently added point.
+
+5- Reset Points: Clear all selected points.
+
+6- Save & Next Video: Save the annotations and load the next video
+
+## A short demo video for the full workflow:
+
+
+https://github.com/user-attachments/assets/90eae3eb-009f-4093-8e76-481d46590928
+
+
 
 ## Acknowledgements
 This project is built on top of the SAM2 model developed by Meta AI.  
