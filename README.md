@@ -3,6 +3,10 @@
 ## Project Overview
 This project enables video annotation for segmentation using SAM2 in a simplified workflow, where annotators only need to annotate a **single frame** of each video using point prompts. It provides an interactive UI based annotation interface built with Gradio that allows users to efficiently create segmentation masks.
 
+## A short demo video for the full workflow:
+
+https://github.com/user-attachments/assets/90eae3eb-009f-4093-8e76-481d46590928
+
 ## Notes
 
 - A CUDA enabled GPU is required to run SAM2.
@@ -74,13 +78,6 @@ Masks will be saved to the directory specified in ```config.yaml```, along with 
 5- Reset Points: Clear all selected points.
 
 6- Save & Next Video: Save the annotations and load the next video
-
-## A short demo video for the full workflow:
-
-
-https://github.com/user-attachments/assets/90eae3eb-009f-4093-8e76-481d46590928
-
-
 
 ## Acknowledgements
 This project is built on top of the SAM2 model developed by Meta AI.  
